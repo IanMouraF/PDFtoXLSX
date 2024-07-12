@@ -4,6 +4,8 @@ import fitz  # PyMuPDF
 import pandas as pd
 
 app = Flask(__name__)
+app.config['UPLOAD_FOLDER'] = 'uploads'
+os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
 def extract_table_data_from_text_v2(pdf_text):
     lines = pdf_text.split('\n')
@@ -88,6 +90,4 @@ def convert():
 
 
 if __name__ == '__main__':
-    app.config['UPLOAD_FOLDER'] = 'uploads'
-    os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
     app.run(debug=True)
