@@ -1,0 +1,130 @@
+/* Custom font */
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+html, body {
+    height: 100%;
+    background: linear-gradient(rgba(245, 244, 243, 0.6), rgba(122, 121, 122, 0.6));
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background: none;
+}
+
+
+/* Form styles */
+#msform {
+    width: 400px;
+    text-align: center;
+    background: white;
+    border-radius: 3px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    padding: 1.9rem 1.9rem 5.8rem; /* Aumentei o padding vertical */
+    margin: 50px auto;
+    position: relative;
+}
+
+#msform fieldset {
+    border: 0 none;
+    padding: 0;
+    margin: 0;
+    height: 25rem;
+}
+
+#msform h2.fs-title {
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #2C3E50;
+    margin-bottom: 20px;
+}
+
+#msform .file-input-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+#msform .file-input-wrapper input[type="file"] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+
+    transition: background 0.3s ease;
+}
+
+.file-upload-button {
+  width: calc(100% - 20px); /* Leva em conta o padding e margem */
+  max-width: 11rem; /* Garante que não ultrapasse a largura do elemento pai */
+    background: #85161c;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px 5px;
+    margin-bottom: 80px;
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-block;
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho total */
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.file-name {
+    padding: 15px 10px; /* Ajuste o padding conforme necessário */
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 13px;
+    color: #2C3E50;
+    display: inline-block;
+    margin-bottom: 10px;
+    height: 80px; /* Ajuste a altura conforme desejado */
+    line-height: 1.5; /* Ajusta o line-height para centralizar verticalmente */
+    text-align: center; /* Centraliza o texto horizontalmente */
+    display: flex; /* Usa flexbox para centralizar verticalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.convert-button {
+    width: calc(100% - 120px); /* Leva em conta o padding e margem */
+    max-width: 100%; /* Garante que não ultrapasse a largura do elemento pai */
+    background: #27AE60;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 10px 15px; /* Ajuste o padding conforme necessário */
+    margin: 80px 0 10px 0;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background 0.3s ease;
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho total */
+}
+
+.file-upload-button:hover,
+.file-upload-button:focus{
+  background-color: #9b2127;
+}
+.convert-button:hover,
+.convert-button:focus {
+    background: #219653;
+}

@@ -4,12 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PDF to Excel Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>PDF to Excel Converter</h1>
-<form action="/convert" method="post" enctype="multipart/form-data">
-    <input type="file" name="pdf_file" accept=".pdf">
-    <button type="submit">Converter PDF</button>
-</form>
+    <div id="msform">
+        <fieldset>
+            <h2 class="fs-title">Comércio de Motopeças</h2>
+            <h2 class="fs-title">Converter PDF para Planilha Excel</h2>
+            <form action="/convert" method="post" enctype="multipart/form-data">
+                <label for="pdf_file"></label>
+                <div class="file-input-wrapper">
+                    <input type="file" id="pdf_file" name="pdf_file" accept=".pdf">
+                    <button type="button" class="file-upload-button">Escolher Arquivo</button>
+                    <span class="file-name">Nenhum arquivo escolhido</span>
+                </div>
+                <button type="submit" class="convert-button">Converter para XLSX</button>
+            </form>
+        </fieldset>
+    </div>
+
+    <script>
+        document.getElementById('pdf_file').addEventListener('change', function() {
+            var fileName = this.files[0].name;
+            document.querySelector('.file-name').textContent = fileName;
+        });
+    </script>
 </body>
 </html>
